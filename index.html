@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What are you doing?</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <h1 id="gameTitle">What are you doing?</h1>
+
+    <section class="select-screen" id="selectScreen" aria-label="Pick Pokemon">
+      <div class="setup-panel" id="setupPanel">
+        <div class="content-controls">
+          <label>
+            Title
+            <input id="titleInput" type="text" value="What are you doing?" maxlength="40">
+          </label>
+          <label>
+            Bubble
+            <input id="bubbleInput" type="text" value="I'm..." maxlength="28">
+          </label>
+          <label class="word-control">
+            Words
+            <textarea id="wordsInput" rows="3">I, i, J, j, [igloo], [juice]</textarea>
+          </label>
+        </div>
+        <div class="roster-list" id="rosterList"></div>
+        <div class="setup-actions">
+          <button class="setup-button" id="addPlayerButton" type="button">Add</button>
+          <button class="setup-button start-button" id="startPlayersButton" type="button">Start</button>
+        </div>
+      </div>
+      <div class="player-slots" id="playerSlots"></div>
+      <div class="character-grid hidden" id="characterGrid"></div>
+    </section>
+
+    <section class="play-screen hidden" id="playScreen" aria-label="Pokemon points">
+      <div class="score-row" id="scoreRow"></div>
+      <div class="stage">
+        <div class="active-player" id="activePlayer"></div>
+        <div class="board-panel">
+          <div class="row-heads" id="columnHeads"></div>
+          <div class="pokeball-rack" id="pokeballRack"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="leaderboard-screen hidden" id="leaderboardScreen" aria-label="Leaderboard">
+      <img class="finale-bomb" src="assets/bomb-finale.gif" alt="">
+      <div class="leaderboard" id="leaderboard"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
